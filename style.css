@@ -1,0 +1,249 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f2f6fb;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* HEADER */
+header {
+    background: rgba(0, 40, 85, 0.95);
+    color: #fff;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+/* LOGO */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-container img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: white;
+    padding: 3px;
+    border: 2px solid #4da3ff;
+}
+
+header h1 {
+    font-size: 26px;
+}
+
+.motto {
+    font-style: italic;
+    margin-top: 6px;
+}
+
+/* NAVIGATION */
+nav {
+    margin-top: 18px;
+}
+
+nav a {
+    color: white;
+    margin: 5px;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.15);
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.35);
+}
+
+/* HERO SLIDESHOW */
+.hero {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    animation: slideshow 30s infinite;
+    z-index: -2;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 40, 85, 0.65);
+    z-index: -1;
+}
+
+@keyframes slideshow {
+    0%   { background-image: url("../images/home.jpeg"); }
+    33%  { background-image: url("../images/s2.jpeg"); }
+    66%  { background-image: url("../images/s3.jpeg"); }
+    100% { background-image: url("../images/s4.jpeg"); }
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h2 {
+    font-size: 44px;
+    margin-bottom: 15px;
+}
+
+/* MAIN CONTENT */
+.content {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+}
+
+.card h2 {
+    color: #004aad;
+    margin-bottom: 12px;
+}
+
+/* PROGRAMS */
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.program img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+/* IMAGE GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* VIDEO GALLERY */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.video-item video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.video-item p {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* DONATE PAGE */
+.donate-box {
+    border-left: 6px solid #004aad;
+    background: #eef4ff;
+}
+
+/* FOOTER */
+footer {
+    background: #001a33;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}
+.contact-item {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.contact-item i {
+    color: #004aad;
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.contact-item a {
+    color: #004aad;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+.donate-item {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.donate-item i {
+    color: #004aad;
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.donate-item a {
+    color: #004aad;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.donate-item a:hover {
+    text-decoration: underline;
+}
+
+.donate-note {
+    margin-top: 25px;
+    font-style: italic;
+}
+
+.donate-note a {
+    color: #004aad;
+    font-weight: 600;
+}
